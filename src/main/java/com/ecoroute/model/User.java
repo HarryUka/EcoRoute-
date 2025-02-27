@@ -22,17 +22,11 @@ public class User extends BaseEntity {
     private String password;
 
     @Column(nullable = false)
-    private String companyName;
-
-    @Column(nullable = false)
-    private String firstName;
-
-    @Column(nullable = false)
-    private String lastName;
+    private String name;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default
     private Set<String> roles = new HashSet<>();
 
     private boolean active = true;
-} 
+}

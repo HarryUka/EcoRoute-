@@ -1,39 +1,44 @@
-# EcoRoute+
+# EcoRoute+ API
 
-An affordable, user-friendly route optimization app focused on real-time AI re-routing, sustainability metrics, and targeting small businesses.
+A simple Spring Boot application demonstrating a complete SDLC with AWS integration.
 
-## Project Overview
+## Features
+- User management (register/login)
+- Basic route tracking
+- AWS integration
+- CI/CD with GitHub Actions
 
-EcoRoute+ helps businesses optimize their delivery routes while considering environmental impact. The application provides:
+## Tech Stack
+- Java 17
+- Spring Boot 3.x
+- PostgreSQL
+- AWS (ECS, RDS)
+- GitHub Actions
 
-- Real-time route optimization
-- Carbon footprint tracking
-- Cost-effective routing solutions
-- Traffic-aware path finding
-- Sustainability metrics dashboard
+## Local Development
+1. Prerequisites:
+   - Java 17
+   - Maven
+   - Docker
+   - PostgreSQL
 
-## Technical Stack
+2. Setup:
+   ```bash
+   git clone <repository-url>
+   cd ecoroute-plus
+   mvn clean install
+   ```
 
-- **Backend:**
-  - Java 17
-  - Spring Boot 3.x
-  - Spring Data JPA
-  - Spring Security
+3. Run:
+   ```bash
+   mvn spring-boot:run
+   ```
 
-- **Database:**
-  - PostgreSQL (for route and user data)
-  - Redis (for real-time caching)
+## API Endpoints
+- POST /api/users - Register user
+- POST /api/auth/login - Login
+- GET /api/routes - List routes
+- POST /api/routes - Create route
 
-- **Cloud Infrastructure (AWS):**
-  - AWS Elastic Beanstalk (application hosting)
-  - Amazon RDS (PostgreSQL)
-  - Amazon ElastiCache (Redis)
-  - Amazon CloudWatch (monitoring)
-  - AWS Lambda (real-time calculations)
-
-- **CI/CD:**
-  - GitHub Actions
-  - Docker containers
-  - AWS CodeDeploy
-
-## Project Structure
+## Deployment
+The application is automatically deployed to AWS using GitHub Actions when pushing to main branch.
